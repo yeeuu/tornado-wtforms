@@ -1,12 +1,8 @@
-# tornado-wtforms
-Package tornado-wtforms is a helper to add wtforms support into tornado web framework.
+import os
+import sys
+my_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.abspath(os.path.join(my_dir, '..')))
 
-Work from [wtforms-tornado](https://github.com/puentesarrin/wtforms-tornado)
-
-Usage
-===
-
-```
 import tornado.ioloop
 import tornado.web
 
@@ -37,11 +33,3 @@ application = tornado.web.Application([
 if __name__ == "__main__":
     application.listen(10240)
     tornado.ioloop.IOLoop.instance().start()
-```
-
-Installation
-===
-
-You can to use pip to install from last source:
-
-    $ pip install git+git://github.com/yeeuu/tornado-wtforms.git
